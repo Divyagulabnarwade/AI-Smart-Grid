@@ -8,7 +8,8 @@ import plotly.graph_objects as go
 st.title("🔍 Electricity Theft Detection")
 
 # ---------------- LOAD DATA ----------------
-df = pd.read_csv("data/theft_data.csv")
+import os
+df = pd.read_csv(os.path.join("data", "theft_data.csv"))
 
 # ---------------- LOAD MODEL ----------------
 model = joblib.load("models/theft_model.pkl")
