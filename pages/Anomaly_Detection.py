@@ -11,7 +11,9 @@ st.title("⚡ Electricity Grid Health Check")
 st.divider()
 
 # Load data
-df = pd.read_csv("data/grid_data.csv")
+import os
+path = os.path.join("data", "grid_data.csv")
+df = pd.read_csv(path)
 
 # AI check (hidden logic)
 features = df[["Voltage", "Frequency", "Current", "PowerFactor"]]
