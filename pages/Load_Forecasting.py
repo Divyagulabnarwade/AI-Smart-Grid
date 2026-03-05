@@ -15,7 +15,8 @@ st.markdown("### Time-Series Load Prediction (Hyderabad Grid Simulation)")
 st.divider()
 
 # Load dataset
-df = pd.read_csv("data/load_data.csv")
+import os
+df = pd.read_csv(os.path.join("data", "load_data.csv"))
 df["Datetime"] = pd.to_datetime(df["Datetime"])
 
 # Show time-series graph
